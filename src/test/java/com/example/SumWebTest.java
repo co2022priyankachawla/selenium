@@ -21,9 +21,9 @@ public class SumWebTest {
     @Before
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); // Headless mode for Jenkins
-        options.addArguments("--allow-file-access-from-files"); // Access local HTML
-        driver = new ChromeDriver(options);
+options.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
+WebDriver driver = new ChromeDriver(options);
+
     }
 
     @Test
